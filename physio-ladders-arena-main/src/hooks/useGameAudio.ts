@@ -5,6 +5,7 @@ export const useGameAudio = () => {
   const diceRollAudioRef = useRef<HTMLAudioElement>(null);
   const ladderAudioRef = useRef<HTMLAudioElement>(null);
   const snakeAudioRef = useRef<HTMLAudioElement>(null);
+  const winAudioRef = useRef<HTMLAudioElement>(null);
 
   const playDiceRollSound = () => {
     if (diceRollAudioRef.current) {
@@ -27,12 +28,21 @@ export const useGameAudio = () => {
     }
   };
 
+  const playWinSound = () => {
+    if (winAudioRef.current) {
+      winAudioRef.current.currentTime = 0;
+      winAudioRef.current.play().catch(() => {});
+    }
+  };
+
   return {
     diceRollAudioRef,
     ladderAudioRef,
     snakeAudioRef,
+    winAudioRef,
     playDiceRollSound,
     playLadderSound,
-    playSnakeSound
+    playSnakeSound,
+    playWinSound
   };
 };

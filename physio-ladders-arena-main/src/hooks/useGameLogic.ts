@@ -40,6 +40,7 @@ export const useGameLogic = ({ systemBoard, gameMode, players }: UseGameLogicPro
     diceRollAudioRef: gameAudio.diceRollAudioRef,
     ladderAudioRef: gameAudio.ladderAudioRef,
     snakeAudioRef: gameAudio.snakeAudioRef,
+    winAudioRef: gameAudio.winAudioRef,
     
     // Actions
     setShowStore: gameState.setShowStore,

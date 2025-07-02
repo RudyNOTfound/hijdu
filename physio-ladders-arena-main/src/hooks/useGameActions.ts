@@ -31,6 +31,7 @@ interface UseGameActionsProps {
   playDiceRollSound: () => void;
   playLadderSound: () => void;
   playSnakeSound: () => void;
+  playWinSound: () => void;
 }
 
 export const useGameActions = ({
@@ -58,7 +59,8 @@ export const useGameActions = ({
   currentPlayerPosition,
   playDiceRollSound,
   playLadderSound,
-  playSnakeSound
+  playSnakeSound,
+  playWinSound
 }: UseGameActionsProps) => {
   const { toast } = useToast();
 
@@ -216,7 +218,7 @@ export const useGameActions = ({
     const newATPs = [...playerATPs];
     newATPs[currentPlayerIndex] += 100;
     setPlayerATPs(newATPs);
-    
+    playWinSound();
     toast({
       title: `🎉 ${players[currentPlayerIndex]} Wins!`,
       description: `Mastered the ${systemBoard} system! +100 ATP bonus!`,

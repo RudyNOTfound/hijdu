@@ -45,6 +45,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
     diceRollAudioRef,
     ladderAudioRef,
     snakeAudioRef,
+    winAudioRef,
     
     // Actions
     setShowStore,
@@ -61,13 +62,16 @@ export const GameBoard: React.FC<GameBoardProps> = ({
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 p-4 overflow-hidden">
       {/* Audio elements for sound effects */}
       <audio ref={diceRollAudioRef} preload="auto">
-        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmMaBjyO1fPQfycFJHfH79+SQwoUXrPn66pWFAlFnt7tv2UbBz+M0/HVfyUELHvG7eGVRgsQ" type="audio/wav" />
+        <source src="/audios/dice_roll.wav" type="audio/wav"/>
       </audio>
       <audio ref={ladderAudioRef} preload="auto">
-        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmMaBjyO1fPQfycFJHfH79+SQwoUXrPn66pWFAlFnt7tv2UbBz+M0/HVfyUELHvG7eGVRgsQWbXo66hVFAlFnt7tv2UbBz+M0/HVfyUELHvG7eGVRgsQWrTp66pWFAlFnt7tv2UbBz+M0/HVfyUELHvG7eGVRgsQ" type="audio/wav" />
+        <source src="/audios/ladder_climb.wav" type="audio/wav" />
       </audio>
       <audio ref={snakeAudioRef} preload="auto">
-        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmMaBjyO1fPQfycFJHfH79+SQwoUXrPn66pWFAlFnt7tv2UbBz+M0/HVfyUELHvG7eGVRgsQKW+96eCVQwoUXrTp66hVFApGn+DyvmMaBjyO1fPQfycFJHfH79+SQwoUXrPn66pWFAlFnt7tv2UbBz+M0/HVfyUELHvG7eGVRgsQ" type="audio/wav" />
+        <source src="/audios/snake_bite.wav" type="audio/wav" />
+      </audio>
+      <audio ref={winAudioRef} preload="auto">
+        <source src="/audios/victory.wav" type="audio/wav" />
       </audio>
 
       {/* Top Bar */}
