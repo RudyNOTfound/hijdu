@@ -97,10 +97,10 @@ export const GameBoard: React.FC<GameBoardProps> = ({
         </Button>
       </div>
 
-      <div className="max-w-6xl mx-auto h-[calc(100vh-8rem)]">
+      <div className="max-w-[100vw] mx-auto h-[95vh]">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 h-full">
           {/* Game Board */}
-          <div className="lg:col-span-3 flex items-center justify-center">
+          <div className="lg:col-span-3 flex items-center justify-center h-full">
             <GameBoardDisplay
               playerPositions={playerPositions}
               players={players}

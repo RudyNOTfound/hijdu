@@ -38,15 +38,14 @@ export const GameBoardDisplay: React.FC<GameBoardDisplayProps> = ({
   ];
 
   return (
-    <Card className="p-4 bg-black">
-      <div className="relative w-full max-w-2xl mx-auto bg-black rounded-lg">
+    <Card className="p-0 bg-black h-full w-full">
+      <div className="relative max-w-2xl mx-auto bg-black rounded-lg">
         <img 
           src="/lovable-uploads/a5adee1b-1209-4018-b9d1-7e9f5dec182d.png" 
           alt="Snakes and Ladders Board"
-          className="w-full h-auto rounded-lg shadow-lg object-contain max-h-[60vh]"
+          className="w-full h-full rounded-lg shadow-lg object-contain"
           style={{ 
-            width: 'calc(100% + 10px)', 
-            height: 'calc(100% + 10px)',
+            width: '100%', height: 'auto',
             filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.1))'
           }}
         />
